@@ -1,0 +1,145 @@
+/* styles.css */
+
+/* Color palette */
+:root {
+  --primary-blue: #1e3a8a; /* Deep blue */
+  --secondary-green: #047857; /* Emerald green */
+  --light-bg: #f0fdf4; /* Very light green background */
+  --light-text: #e0f2fe;
+  --dark-text: #1f2937;
+  --white: #ffffff;
+}
+
+/* Base styles */
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+}
+
+a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header and navigation */
+header {
+  background: var(--primary-blue);
+  color: var(--white);
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+nav a {
+  color: var(--white);
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--secondary-green);
+}
+
+/* Hero section */
+.hero {
+  background: var(--secondary-green);
+  color: var(--white);
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Main container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* About, Books, Contact Sections */
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  border-bottom: 3px solid var(--primary-blue);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-blue);
+}
+
+/* Books grid */
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.book {
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.book:hover {
+  transform: translateY(-5px);
+}
+
+.book img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.book h3 {
+  color: var(--secondary-green);
+  margin-top: 0.5rem;
+}
+
+/* Newsletter Form */
+.newsletter input[type="email"] {
+  padding: 0.5rem;
+  width: 70%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.newsletter input[type="submit"] {
+  padding: 0.5rem 1rem;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.newsletter input[type="submit"]:hover {
+  background: var(--secondary-green);
+}
+
+/* Footer */
+footer {
+  background: var(--primary-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+}
